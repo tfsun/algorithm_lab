@@ -4,6 +4,7 @@ import javax.naming.ldap.SortControl;
 
 public class P4Sort {
 	static void sort(int[] array){
+		int length = array.length;
 		int index = 0;
 		int i = 0;
 		for (; i < array.length; i++) {
@@ -14,7 +15,7 @@ public class P4Sort {
 			}
 		}
 		i = index;
-		for (index=array.length-1; i < array.length && i < index; i++) {
+		for (index=array.length-1; i<index&&i<array.length; i++) {
 			if (array[i]==2) {
 				int tmp = array[i];
 				array[i] = array[index];
